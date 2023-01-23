@@ -8,11 +8,10 @@ public class LinkedRepository {
             node = new MyNode(i);
             linkedListEx.head = node;
         } else {
-            node = linkedListEx.head;
-            while (node.next != null) {
-                node = node.next;
-            }
-            node.next = new MyNode(i);
+            node = new MyNode(i);
+            node.next = linkedListEx.head;
+            linkedListEx.head = node;
+
         }
         return linkedListEx;
     }
