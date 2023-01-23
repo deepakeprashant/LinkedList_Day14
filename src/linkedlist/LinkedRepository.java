@@ -2,6 +2,7 @@ package linkedlist;
 
 public class LinkedRepository {
     public MyNode head;
+
     LinkedRepository insertElement(LinkedRepository linkedListEx, int i) {
         MyNode node = null;
         if (linkedListEx.head == null) {
@@ -12,6 +13,21 @@ public class LinkedRepository {
             node.next = linkedListEx.head;
             linkedListEx.head = node;
 
+        }
+        return linkedListEx;
+    }
+
+    LinkedRepository appendElement(LinkedRepository linkedListEx, int key) {
+        MyNode node = null;
+        if (linkedListEx.head == null) {
+            node = new MyNode(key);
+            linkedListEx.head = node;
+        } else {
+            node = linkedListEx.head;
+            while (node.next != null) {
+                node = node.next;
+            }
+            node.next = new MyNode(key);
         }
         return linkedListEx;
     }
