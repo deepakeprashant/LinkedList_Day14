@@ -1,9 +1,12 @@
 package linkedlist;
 
+import java.util.Scanner;
+
 public class LinkedRepository {
     public MyNode head;
     MyNode node = null;
 
+    Scanner scan = new Scanner(System.in);
     LinkedRepository insertElement(LinkedRepository linkedListEx, int i) {
         if (linkedListEx.head == null) {
             node = new MyNode(i);
@@ -63,5 +66,19 @@ public class LinkedRepository {
                 System.out.print(" -> ");
             }
         }
+    }
+
+    void searchElement(LinkedRepository linkedListEx, int key) {
+        node = linkedListEx.head;
+        MyNode searchNode = new MyNode(key);
+        while (node.next != null){
+            if (node.key == searchNode.key){
+                System.out.println("\n:: Element is present");
+                System.out.println("Node ["+node.key+" ,("+node+")]");
+                return;
+            }
+            node = node.next;
+        }
+        System.out.println("\n:: Element is Not Present");
     }
 }

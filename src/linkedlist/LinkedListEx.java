@@ -15,8 +15,9 @@ public class LinkedListEx {
 //        System.out.println("\n:: Pop First Node");
 //        linkedListEx.popFirstNode(linkedListEx);
 //        linkedListEx.print(linkedListEx);
-        System.out.println("\n:: Pop Last Node :- ");
-        linkedListEx.popLastNode(linkedListEx);
+//        System.out.println("\n:: Pop Last Node :- ");
+//        linkedListEx.popLastNode(linkedListEx);
         linkedListEx.print(linkedListEx);
+        linkedListEx.searchElement(linkedListEx , 30);
     }
 }
