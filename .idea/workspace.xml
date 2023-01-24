@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="741596f0-72c6-4d6e-ac2b-750342b08df9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/refactore/linkedlist/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/refactore/linkedlist/LinkedRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/refactore/linkedlist/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/refactore/linkedlist/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkedlist/LinkedListEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/LinkedListEx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkedlist/LinkedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/LinkedRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,20 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LinkedList">
+    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="refactore.linkedlist.LinkedList" />
+      <module name="Asigment_Day14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="refactore.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkedListEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="linkedlist.LinkedListEx" />
       <module name="Asigment_Day14" />
@@ -56,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinkedList" />
         <item itemvalue="Application.LinkedListEx" />
       </list>
     </recent_temporary>
@@ -81,5 +97,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/refactore/linkedlist/LinkedList.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/refactore/linkedlist/LinkedList.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
