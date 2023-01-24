@@ -10,14 +10,17 @@ public class LinkedListEx {
         linkedListEx.appendElement(linkedListEx, 56);
         linkedListEx.appendElement(linkedListEx, 70);
 
-        linkedListEx.insertNewPosition(linkedListEx, 30);
+        linkedListEx.insertPosition(linkedListEx, 30);
         linkedListEx.print(linkedListEx);
 //        System.out.println("\n:: Pop First Node");
 //        linkedListEx.popFirstNode(linkedListEx);
 //        linkedListEx.print(linkedListEx);
 //        System.out.println("\n:: Pop Last Node :- ");
 //        linkedListEx.popLastNode(linkedListEx);
+//        linkedListEx.print(linkedListEx);
+//        linkedListEx.searchElement(linkedListEx , 30);
+        System.out.println("\n:: Add New Element\n");
+        linkedListEx.insertNewPosition(linkedListEx, 40,30);
         linkedListEx.print(linkedListEx);
-        linkedListEx.searchElement(linkedListEx , 30);
     }
 }

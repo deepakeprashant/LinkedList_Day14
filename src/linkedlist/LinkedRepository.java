@@ -33,7 +33,7 @@ public class LinkedRepository {
         return linkedListEx;
     }
 
-    LinkedRepository insertNewPosition(LinkedRepository linkedListEx, int key) {
+    LinkedRepository insertPosition(LinkedRepository linkedListEx, int key) {
         node = new MyNode(key);
         node.next = linkedListEx.head.next;
         linkedListEx.head.next = node;
@@ -80,5 +80,21 @@ public class LinkedRepository {
             node = node.next;
         }
         System.out.println("\n:: Element is Not Present");
+    }
+
+    void insertNewPosition(LinkedRepository linkedListEx, int newKey, int key) {
+        node = linkedListEx.head;
+        MyNode searchNode = new MyNode(key);
+        while (node.next != null){
+            if (node.key == searchNode.key){
+                MyNode addNode = new MyNode(newKey);
+                addNode.next = node.next;
+                node.next = addNode;
+                return;
+            }
+            node = node.next;
+        }
+        System.out.println("\n:: Element is Not Present");
+
     }
 }
