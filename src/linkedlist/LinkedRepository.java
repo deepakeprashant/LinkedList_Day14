@@ -7,6 +7,7 @@ public class LinkedRepository {
     MyNode node = null;
 
     Scanner scan = new Scanner(System.in);
+
     LinkedRepository insertElement(LinkedRepository linkedListEx, int i) {
         if (linkedListEx.head == null) {
             node = new MyNode(i);
@@ -56,25 +57,13 @@ public class LinkedRepository {
         return linkedListEx;
     }
 
-    public void print(LinkedRepository linkedListEx) {
-        System.out.println("Head [ " + linkedListEx.head + " ]");
-        MyNode node = linkedListEx.head;
-        while (node != null) {
-            System.out.print("Node [ " + node.key + " ]");
-            node = node.next;
-            if (node != null) {
-                System.out.print(" -> ");
-            }
-        }
-    }
-
     void searchElement(LinkedRepository linkedListEx, int key) {
         node = linkedListEx.head;
         MyNode searchNode = new MyNode(key);
-        while (node.next != null){
-            if (node.key == searchNode.key){
+        while (node.next != null) {
+            if (node.key == searchNode.key) {
                 System.out.println("\n:: Element is present");
-                System.out.println("Node ["+node.key+" ,("+node+")]");
+                System.out.println("Node [" + node.key + " ,(" + node + ")]");
                 return;
             }
             node = node.next;
@@ -85,8 +74,8 @@ public class LinkedRepository {
     void insertNewPosition(LinkedRepository linkedListEx, int newKey, int key) {
         node = linkedListEx.head;
         MyNode searchNode = new MyNode(key);
-        while (node.next != null){
-            if (node.key == searchNode.key){
+        while (node.next != null) {
+            if (node.key == searchNode.key) {
                 MyNode addNode = new MyNode(newKey);
                 addNode.next = node.next;
                 node.next = addNode;
@@ -96,5 +85,47 @@ public class LinkedRepository {
         }
         System.out.println("\n:: Element is Not Present");
 
+    }
+
+    void popNewPosition(LinkedRepository linkedListEx, int key) {
+        node = linkedListEx.head;
+        int size = getLinkedListSize(linkedListEx.head);
+        MyNode searchNode = new MyNode(key);
+        MyNode previousNode = null;
+        for (int i = 0; i < size; i++) {
+            if (node.key == searchNode.key){
+                previousNode.next = node.next;
+                return;
+            }
+            previousNode = node;
+            node = node.next;
+        }
+        System.out.println("\n:: Element is Not Present");
+
+    }
+
+    int getLinkedListSize(MyNode head) {
+        int count = 1;
+        if (head.next == null) {
+            return 0;
+        }
+        while (head.next != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+
+    public void print(LinkedRepository linkedListEx) {
+        int size = getLinkedListSize(head);
+        System.out.println("Head [ " + linkedListEx.head + " ] Linked List Size :- "+size);
+        MyNode node = linkedListEx.head;
+        while (node != null) {
+            System.out.print("Node [ " + node.key + " ]");
+            node = node.next;
+            if (node != null) {
+                System.out.print(" -> ");
+            }
+        }
     }
 }
