@@ -12,8 +12,11 @@ public class LinkedListEx {
 
         linkedListEx.insertNewPosition(linkedListEx, 30);
         linkedListEx.print(linkedListEx);
-        System.out.println("\n:: Pop First Node");
-        linkedListEx.popFirstNode(linkedListEx);
+//        System.out.println("\n:: Pop First Node");
+//        linkedListEx.popFirstNode(linkedListEx);
+//        linkedListEx.print(linkedListEx);
+        System.out.println("\n:: Pop Last Node :- ");
+        linkedListEx.popLastNode(linkedListEx);
         linkedListEx.print(linkedListEx);
     }
 }

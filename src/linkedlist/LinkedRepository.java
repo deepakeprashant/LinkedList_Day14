@@ -42,6 +42,17 @@ public class LinkedRepository {
         return linkedListEx;
     }
 
+    LinkedRepository popLastNode(LinkedRepository linkedListEx) {
+        node = linkedListEx.head;
+        MyNode lastNode = null;
+        while (node.next != null) {
+            lastNode = node;
+            node = node.next;
+        }
+        lastNode.next = null;
+        return linkedListEx;
+    }
+
     public void print(LinkedRepository linkedListEx) {
         System.out.println("Head [ " + linkedListEx.head + " ]");
         MyNode node = linkedListEx.head;
