@@ -3,8 +3,9 @@ package linkedlist;
 public class LinkedRepository {
     public MyNode head;
 
+    MyNode node = null;
+
     LinkedRepository insertElement(LinkedRepository linkedListEx, int i) {
-        MyNode node = null;
         if (linkedListEx.head == null) {
             node = new MyNode(i);
             linkedListEx.head = node;
@@ -18,7 +19,6 @@ public class LinkedRepository {
     }
 
     LinkedRepository appendElement(LinkedRepository linkedListEx, int key) {
-        MyNode node = null;
         if (linkedListEx.head == null) {
             node = new MyNode(key);
             linkedListEx.head = node;
@@ -29,6 +29,14 @@ public class LinkedRepository {
             }
             node.next = new MyNode(key);
         }
+        return linkedListEx;
+    }
+
+    LinkedRepository insertNewPosition(LinkedRepository linkedListEx, int key) {
+        node = new MyNode(key);
+        node.next = linkedListEx.head.next;
+        linkedListEx.head.next = node;
+
         return linkedListEx;
     }
 

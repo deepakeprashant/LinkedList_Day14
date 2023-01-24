@@ -8,9 +8,9 @@ public class LinkedListEx {
 //        linkedListEx.insertElement(linkedListEx, 30);
 //        linkedListEx.insertElement(linkedListEx, 56);
         linkedListEx.appendElement(linkedListEx, 56);
-        linkedListEx.appendElement(linkedListEx, 30);
         linkedListEx.appendElement(linkedListEx, 70);
 
+        linkedListEx.insertNewPosition(linkedListEx, 30);
         linkedListEx.print(linkedListEx);
     }
 }
