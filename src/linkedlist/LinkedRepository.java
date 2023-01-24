@@ -2,7 +2,6 @@ package linkedlist;
 
 public class LinkedRepository {
     public MyNode head;
-
     MyNode node = null;
 
     LinkedRepository insertElement(LinkedRepository linkedListEx, int i) {
@@ -13,7 +12,6 @@ public class LinkedRepository {
             node = new MyNode(i);
             node.next = linkedListEx.head;
             linkedListEx.head = node;
-
         }
         return linkedListEx;
     }
@@ -36,7 +34,11 @@ public class LinkedRepository {
         node = new MyNode(key);
         node.next = linkedListEx.head.next;
         linkedListEx.head.next = node;
+        return linkedListEx;
+    }
 
+    LinkedRepository popFirstNode(LinkedRepository linkedListEx) {
+        linkedListEx.head = linkedListEx.head.next;
         return linkedListEx;
     }
 
@@ -44,10 +46,10 @@ public class LinkedRepository {
         System.out.println("Head [ " + linkedListEx.head + " ]");
         MyNode node = linkedListEx.head;
         while (node != null) {
-            System.out.print("Node [ " + node.key + " , " + node.next + " ]");
+            System.out.print("Node [ " + node.key + " ]");
             node = node.next;
             if (node != null) {
-                System.out.println("->");
+                System.out.print(" -> ");
             }
         }
     }
